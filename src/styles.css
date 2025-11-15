@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+ :root {
+    --bg: #f6f4f2;
+    /* soft ivory */
+    --panel: #ffffff;
+    /* white panels */
+    --muted: #6b6b6b;
+    /* muted text */
+    --accent: #2f2f2f;
+    /* dark granite */
+    --callout: #b7b3af;
+    /* stone accent */
+    --card-shadow: 0 6px 22px rgba(15, 15, 15, 0.08);
+}
+
+body {
+    background: linear-gradient(180deg, var(--bg), #efeded 60%);
+    color: var(--accent);
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.45;
+}
