@@ -1,0 +1,93 @@
+.hero-wrapper {
+    position: relative;
+    height: 60vh;
+    min-height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("/assets/about/hero.jpg") center/cover no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+
+/* Dark overlay */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(1px);
+}
+
+
+/* Centered text */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    padding: 0 1rem;
+}
+
+
+/* Fade animation */
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.5s;
+}
+
+
+/* Animation keyframes */
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Mobile override */
+
+@media (max-width: 768px) {
+    .hero-wrapper {
+        background-attachment: scroll;
+        height: 45vh;
+    }
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 12px 32px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    background: #ffffffdd;
+    color: #111;
+    transition: 0.25s ease-in-out;
+}
+
+.hero-btn:hover {
+    background: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Button animation delay */
+
+.delay-2 {
+    animation-delay: 0.9s;
+}
