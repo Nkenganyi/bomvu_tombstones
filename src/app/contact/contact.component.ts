@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
+
+  submitted = false;
+
+  form = {
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  };
+
+  submitForm() {
+    console.log("FORM DATA:", this.form);
+    this.submitted = true;
+
+    // ❗️ To send via API later:
+    // this.http.post("YOUR_BACKEND_URL", this.form).subscribe(...)
+  }
 }
