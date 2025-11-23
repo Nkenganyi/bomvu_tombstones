@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-custom">
+    <nav class="navbar navbar-expand-lg navbar-custom" [class.navbar-scrolled]="isScrolled">
         <div class="container">
             <a class="navbar-brand brand-title" href="#">Bomvu Tombstone</a>
 
@@ -66,16 +66,24 @@
                     </ul>
                 </div>
 
-                <!-- SOCIALS -->
+                <!-- SOCIALS + FACEBOOK FRAME -->
                 <div class="col-md-4 mb-4">
                     <h6 class="fw-bold mb-3">Connect</h6>
 
-                    <div class="d-flex gap-3">
+                    <div class="d-flex gap-3 mb-3">
                         <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
                         <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
                         <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a>
                     </div>
+
+                    <!-- FACEBOOK PAGE FRAME -->
+                    <div class="fb-frame-wrapper">
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https://web.facebook.com/marketplace/item/2829678743859437/?ref=category_feed&referral_code=null&referral_story_type=post&tracking=browse_serp%3A52d4cdc3-0275-44ef-81e9-c69a7683d38a&tabs=timeline&width=300&height=180&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false"
+                            width="300" height="180" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                        </iframe>
+                    </div>
                 </div>
+
 
             </div>
 
@@ -83,6 +91,10 @@
                 © {{ currentYear }} Bomvu Tombstones — All rights reserved.
             </div>
         </div>
+        <a class="whatsapp-float" href="https://wa.me/ YOUR_NUMBER ?text=Hello%20I%20would%20like%20to%20make%20an%20enquiry" target="_blank" aria-label="WhatsApp Chat">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+
     </footer>
 
 </body>

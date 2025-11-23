@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +9,12 @@ export class AppComponent {
   title = 'bomvu_tombstones';
 
   currentYear = new Date().getFullYear();
+
+   isScrolled = false;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isScrolled = window.scrollY > 50;
+  }
 
 }
