@@ -11,6 +11,10 @@
     /* dark granite */
     --callout: #b7b3af;
     /* stone accent */
+    --pricolor: #cc0000;
+    /* red */
+    --hovercolor: #630404;
+    /* hover red*/
     --card-shadow: 0 6px 22px rgba(15, 15, 15, 0.08);
 }
 

@@ -30,6 +30,10 @@
     padding: 0 1rem;
 }
 
+.hero-btn {
+    background-color: var(--pricolor);
+}
+
 
 /* Fade animation */
 

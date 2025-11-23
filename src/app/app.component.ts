@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bomvu_tombstones';
+
+  currentYear = new Date().getFullYear();
+
 }

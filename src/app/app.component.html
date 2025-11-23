@@ -35,6 +35,55 @@
         </div>
     </nav>
     <router-outlet></router-outlet>
+    <footer class="footer-wrapper mt-5">
+        <!-- Background image + overlay -->
+        <div class="footer-overlay"></div>
+
+        <div class="container footer-content text-light py-5">
+            <div class="row">
+
+                <!-- LOGO + ABOUT -->
+                <div class="col-md-4 mb-4">
+                    <div class="footer-logo-placeholder mb-3">
+                        <!-- Replace with your logo -->
+                        <span>LOGO HERE</span>
+                    </div>
+
+                    <p class="small mb-2">
+                        Crafting premium tombstones with dignity, precision and care. Your trusted memorial artisans.
+                    </p>
+                </div>
+
+                <!-- QUICK LINKS -->
+                <div class="col-md-4 mb-4">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+
+                    <ul class="list-unstyled footer-links">
+                        <li><a routerLink="/">Home</a></li>
+                        <li><a routerLink="/products">Products</a></li>
+                        <li><a routerLink="/about">About Us</a></li>
+                        <li><a routerLink="/contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- SOCIALS -->
+                <div class="col-md-4 mb-4">
+                    <h6 class="fw-bold mb-3">Connect</h6>
+
+                    <div class="d-flex gap-3">
+                        <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-4 small">
+                © {{ currentYear }} Bomvu Tombstones — All rights reserved.
+            </div>
+        </div>
+    </footer>
 
 </body>
 

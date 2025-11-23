@@ -23,10 +23,14 @@
      margin: 0 auto;
  }
 
+ .chip {
+     color: var(--pricolor);
+ }
+
  .hero-title {
      font-size: clamp(1.25rem, 2.4vw, 2rem);
      font-weight: 700;
-     color: var(--accent);
+     color: var(--pricolor);
      margin-bottom: 0.5rem;
  }
 
@@ -36,6 +40,24 @@
  }
 
  .cta-btn {
-     border-radius: 8px;
+     border: none;
      padding: 0.6rem 1rem;
+     background-color: var(--pricolor);
+     color: white;
+ }
+
+ .cta-btn1 {
+     border-radius: 8px;
+     border-color: var(--pricolor);
+     padding: 0.6rem 1rem;
+     color: var(--pricolor);
+ }
+
+ .cta-btn:hover {
+     background-color: var(--hovercolor)
+ }
+
+ .cta-btn1:hover {
+     background-color: var(--pricolor);
+     color: white;
  }
