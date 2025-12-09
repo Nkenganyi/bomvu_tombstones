@@ -8,33 +8,106 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-custom">
-        <div class="container">
-            <a class="navbar-brand brand-title" href="#">Bomvu Tombstone</a>
+    <nav class="navbar navbar-expand-lg navbar-custom" [class.navbar-scrolled]="isScrolled">
+  <div class="container">
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <!-- BRAND WITH LOGO -->
+    <a class="navbar-brand d-flex align-items-center gap-2 brand-title" href="#">
+      <img src="assets/logo/lan-logo.png" alt="Bomvu Logo" class="brand-logo">
 
-            <div class="collapse navbar-collapse" id="navMain">
-                <ul class="navbar-nav ms-auto align-items-lg-center">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"> Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" routerLink="/tombstones" routerLinkActive="active"> tombstones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" routerLink="/about" routerLinkActive="active"> About Us</a>
-                    </li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-outline-secondary btn-sm cta-btn" href="/contact" routerLinkActive="active"> Contact</a>
-                    </li>
-                </ul>
+    </a>
+
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navMain"
+            aria-controls="navMain"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/tombstones" routerLinkActive="active">Tombstones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about" routerLinkActive="active">About Us</a>
+        </li>
+        <li class="nav-item ms-lg-3">
+          <a class="btn btn-outline-secondary btn-sm cta-btn" href="/contact" routerLinkActive="active">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+    <router-outlet></router-outlet>
+    <footer class="footer-wrapper mt-5">
+        <!-- Background image + overlay -->
+        <div class="footer-overlay"></div>
+
+        <div class="container footer-content text-light py-5">
+            <div class="row">
+
+                <!-- LOGO + ABOUT -->
+                <div class="col-md-4 mb-4">
+                    <div class="footer-logo-placeholder mb-3">
+
+<img src="assets/logo/lan-logo.png" alt="Bomvu Logo" class="footer-brand-logo">
+                    </div>
+
+                    <p class="small mb-2">
+                        Crafting premium tombstones with dignity, precision and care. Your trusted memorial artisans.
+                    </p>
+                </div>
+
+                <!-- QUICK LINKS -->
+                <div class="col-md-4 mb-4">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+
+                    <ul class="list-unstyled footer-links">
+                        <li><a routerLink="/">Home</a></li>
+                        <li><a routerLink="/products">Products</a></li>
+                        <li><a routerLink="/about">About Us</a></li>
+                        <li><a routerLink="/contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- SOCIALS + FACEBOOK FRAME -->
+                <div class="col-md-4 mb-4">
+                    <h6 class="fw-bold mb-3">Connect</h6>
+
+                    <div class="d-flex gap-3 mb-3">
+                        <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+
+                    <!-- FACEBOOK PAGE FRAME -->
+                    <div class="fb-frame-wrapper">
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https://web.facebook.com/marketplace/item/2829678743859437/?ref=category_feed&referral_code=null&referral_story_type=post&tracking=browse_serp%3A52d4cdc3-0275-44ef-81e9-c69a7683d38a&tabs=timeline&width=300&height=180&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false"
+                            width="300" height="180" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                        </iframe>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="text-center mt-4 small">
+                © {{ currentYear }} Bomvu Tombstones — All rights reserved.
             </div>
         </div>
-    </nav>
-    <router-outlet></router-outlet>
+        <a class="whatsapp-float" href="https://wa.me/ YOUR_NUMBER ?text=Hello%20I%20would%20like%20to%20make%20an%20enquiry" target="_blank" aria-label="WhatsApp Chat">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+
+    </footer>
 
 </body>
 

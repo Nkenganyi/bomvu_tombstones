@@ -11,8 +11,30 @@
      box-shadow: var(--card-shadow);
  }
 
+ .hero-media .media-wrapper {
+    width: 70%;
+    max-width: 350px;    /* Prevents right side from expanding the layout */
+    margin: 0 auto;
+}
+
+.hero-logo {
+    width: 300px;
+    height: auto;
+}
+
+.hero-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
  .hero-left {
      padding-right: 1.5rem;
+ }
+
+ .hero-logo{
+  height: 500px;
+  width: auto;
  }
 
  .tombstone-svg {
@@ -23,10 +45,14 @@
      margin: 0 auto;
  }
 
+ .chip {
+     color: var(--pricolor);
+ }
+
  .hero-title {
      font-size: clamp(1.25rem, 2.4vw, 2rem);
      font-weight: 700;
-     color: var(--accent);
+     color: var(--pricolor);
      margin-bottom: 0.5rem;
  }
 
@@ -36,6 +62,75 @@
  }
 
  .cta-btn {
-     border-radius: 8px;
+     border: none;
      padding: 0.6rem 1rem;
+     background-color: var(--pricolor);
+     color: white;
  }
+
+ .cta-btn1 {
+     border-radius: 8px;
+     border-color: var(--pricolor);
+     padding: 0.6rem 1rem;
+     color: var(--pricolor);
+ }
+
+ .cta-btn:hover {
+     background-color: var(--hovercolor)
+ }
+
+ .cta-btn1:hover {
+     background-color: var(--pricolor);
+     color: white;
+ }
+
+ /* Product card hover animation */
+.product-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 12px;
+}
+
+/* Lift + shadow when hovering */
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Image zoom animation */
+.product-card img {
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Optional: smooth fade in for buttons on hover */
+.product-card .btn {
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover .btn {
+  opacity: 1;
+}
+
+
+.btn-dark{
+  background-color: var(--pricolor);
+  border: none;
+  color: #fff;
+}
+
+.btn-dark:hover{
+  background-color: #4e0000;
+}
+
+.btn-outline-secondary{
+  border-color: var(--pricolor);
+  color: var(--pricolor);
+}
+
+.btn-outline-secondary:hover{
+  background-color: var(--pricolor);
+  color: #fff;
+}

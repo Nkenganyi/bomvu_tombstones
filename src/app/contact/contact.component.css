@@ -1,0 +1,34 @@
+.map-hero {
+    width: 100%;
+    height: 45vh;
+    min-height: 320px;
+    overflow: hidden;
+}
+
+form input,
+form textarea {
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+a{
+  text-decoration: none;
+  color: var(--accent);
+}
+
+strong{
+  color: var(--pricolor);
+}
+
+h2, h4{
+  color: var(--pricolor);
+}
+
+.btn{
+  background-color: var(--pricolor);
+  border: none;
+}
+
+.btn:hover{
+  background-color: #4e0000;
+}

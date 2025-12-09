@@ -1,1 +1,51 @@
-<p>contact works!</p>
+<!-- 🌍 GOOGLE MAP HERO -->
+<section class="map-hero">
+    <iframe width="100%" height="100%" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/place/16+Highfield+Rd,+Beacon+Bay+North,+East+London,+5205/@-32.9625599,27.937869,17z/data=!3m1!4b1!4m6!3m5!1s0x1e671fe93ba22667:0x2e0bfce53f5057fe!8m2!3d-32.9625644!4d27.9404439!16s%2Fg%2F11lrmzzl0b?entry=ttu&g_ep=EgoyMDI1MTExMi4wIKXMDSoASAFQAw%3D%3D">
+  </iframe>
+</section>
+
+<!-- 📌 CONTACT INFO -->
+<section class="container py-5">
+    <div class="row">
+
+        <div class="col-lg-5">
+            <h2 class="fw-bold mb-3">Get In Touch</h2>
+
+            <p><strong>📍 Address:</strong><br> 123 Granite Road,<br> Eastern Cape, South Africa
+            </p>
+
+            <p><strong>📞 Phone:</strong>
+                <br><a href="tel:+1234567890">+27 72 755 6166</a>
+            </p>
+
+            <p><strong>📧 Email:</strong>
+                <br><a href="mailto:xolanibomvu@yahoo.co.uk">xolanibomvu@yahoo.co.uk</a>
+                 <br><a href="mailto:lukholopp@gmail.com">lukholopp@gmail.com</a>
+            </p>
+        </div>
+
+        <!-- ✉ CONTACT FORM -->
+        <div class="col-lg-7">
+            <h4 class="fw-semibold mb-3">Send us a message</h4>
+
+            <form (ngSubmit)="submitForm()">
+
+                <input class="form-control mb-2" placeholder="Full Name" [(ngModel)]="form.name" name="name" required>
+
+                <input class="form-control mb-2" placeholder="Email Address" [(ngModel)]="form.email" name="email" type="email" required>
+
+                <input class="form-control mb-2" placeholder="Phone Number" [(ngModel)]="form.phone" name="phone">
+
+                <textarea class="form-control mb-2" placeholder="Your message" rows="4" [(ngModel)]="form.message" name="message" required></textarea>
+
+                <button class="btn btn-dark w-100">Send Message</button>
+            </form>
+
+            <!-- SUCCESS MESSAGE -->
+            <div *ngIf="submitted" class="alert alert-success mt-3">
+                Thank you! We have received your message.
+            </div>
+
+        </div>
+    </div>
+</section>
