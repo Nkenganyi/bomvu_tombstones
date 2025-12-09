@@ -10,7 +10,7 @@ const routes: Routes = [
   { path:'tombstones', component: TombstonesComponent},
   { path:'contact', component: ContactComponent},
   { path:'about', component: AboutComponent},
-  { path: '**', redirectTo: '' }
+  //{ path: '**', redirectTo: '' }
 ];
 
 @NgModule({
