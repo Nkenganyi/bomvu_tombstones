@@ -10,39 +10,42 @@
 <body>
     <!-- HERO -->
     <main class="container hero">
-        <div class="hero-card row align-items-center gx-4">
-            <div class="col-lg-6 hero-left text-center text-lg-start">
-                <!-- Elegant heading -->
-                <div class="chip mb-3">Handcrafted Memorials</div>
-                <h1 class="hero-title">Bomvu Tombstone</h1>
-                <p class="hero-sub">
-                    Respectful, enduring memorial stones crafted from premium granite and limestone. Personalisation options, inscriptions, and installation support.
-                </p>
+    <div class="hero-card row align-items-center gx-4">
 
-                <div class="d-flex gap-2 align-items-center flex-wrap">
-                    <a href="#catalog" class="btn btn-dark cta-btn">View Designs</a>
-                    <a href="/contact" class="btn btn-outline-secondary cta-btn1">Request Quote</a>
-                </div>
+        <!-- LEFT SIDE -->
+        <div class="col-lg-6 hero-left text-center text-lg-start">
+            <div class="chip mb-3">Handcrafted Memorials</div>
 
-                <div class="mt-4 muted-small">
-                    <strong style="color: var(--pricolor);">Trusted memorial artisans</strong> — estimated delivery & installation available. Free consultation.
-                </div>
+            <h1 class="hero-title">Bomvu Tombstone</h1>
+
+            <p class="hero-sub">
+                Respectful, enduring memorial stones crafted from premium granite and limestone.
+                Personalisation options, inscriptions, and installation support.
+            </p>
+
+            <div class="d-flex gap-2 align-items-center flex-wrap">
+                <a href="#catalog" class="btn btn-dark cta-btn">View Designs</a>
+                <a href="/contact" class="btn btn-outline-secondary cta-btn1">Request Quote</a>
             </div>
 
-            <div class="col-lg-6 text-center">
-                <!-- Tombstone SVG / art -->
-
-                <svg class="tombstone-svg" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="tombTitle tombDesc">
-            <title id="tombTitle">Bomvu Tombstone sample</title>
-            <desc id="tombDesc">
-              A tasteful tombstone silhouette with inscription area and simple
-              laurel ornament.
-            </desc>
-
-            </svg>
+            <div class="mt-4 muted-small">
+                <strong style="color: var(--pricolor);">Trusted memorial artisans</strong>
+                — estimated delivery & installation available. Free consultation.
             </div>
         </div>
-    </main>
+
+        <!-- RIGHT SIDE -->
+        <div class="col-lg-6 text-center hero-visual">
+
+            <!-- Added Logo -->
+            <div class="media-wrapper">
+        <img src="assets/logo/bmlogo.png" alt="Bomvu Logo" class="hero-logo">
+    </div>
+
+        </div>
+    </div>
+</main>
+
 
     <section id="catalog" class="container mt-4">
         <div class="d-flex justify-content-between align-items-center mb-3">
@@ -56,182 +59,89 @@
             </div>
         </div>
 
-        <!-- Grid of products -->
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <!-- Product 1 -->
-            <div class="col">
-                <article class="product-card h-100 d-flex flex-column">
-                    <div class="ratio ratio-4x3 mb-3" style="border-radius: 10px; overflow: hidden">
-                        <!-- simple tombstone thumbnail (SVG inline) -->
-                        <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Classic upright tombstone">
-                <rect width="100%" height="100%" fill="#f8f7f6" />
-                <g transform="translate(25,10)">
-                  <rect
-                    x="0"
-                    y="70"
-                    width="150"
-                    height="20"
-                    rx="4"
-                    fill="#c8c4c2"
-                  />
-                  <path
-                    d="M0 70 C0 35, 150 35, 150 70 L150 90 L0 90 Z"
-                    fill="#e6e3e1"
-                    stroke="#cfcac8"
-                  />
-                  <rect
-                    x="35"
-                    y="38"
-                    width="80"
-                    height="30"
-                    rx="4"
-                    fill="#fbfbfa"
-                    stroke="#d7d3d1"
-                  />
-                </g>
-              </svg>
-                    </div>
+      <div class="container mt-5">
+        <h2 class="mb-3 tombstone-heading">Our Tombstone Designs</h2>
 
-                    <div class="mt-auto">
-                        <div class="d-flex justify-content-between align-items-start mb-2">
-                            <div>
-                                <div class="product-title">Classic Upright</div>
-                                <div class="muted-small">
-                                    Polished granite — timeless silhouette
-                                </div>
-                            </div>
-                            <div class="text-end">
-                                <div class="price">$1,250</div>
-                                <div class="muted-small">From</div>
-                            </div>
-                        </div>
+        <div class="row g-4">
+  <div class="col-md-4" *ngFor="let product of randomThree" @fadeSlideIn>
+    <article class="product-card h-100 d-flex flex-column p-3">
 
-                        <div class="d-flex gap-2">
-                            <button class="btn btn-sm btn-outline-secondary w-100" data-bs-toggle="modal" data-bs-target="#quickView1">
-                  Quick view
-                </button>
-                            <button class="btn btn-sm btn-dark w-100">Add to cart</button>
-                        </div>
-                    </div>
-                </article>
-            </div>
+      <!-- 4:3 Image Container -->
+      <div class="ratio ratio-4x3 mb-3"
+           style="border-radius: 10px; overflow: hidden; background-color: #f8f7f6;
+                  display: flex; align-items: center; justify-content: center;">
 
-            <!-- Product 2 -->
-            <div class="col">
-                <article class="product-card h-100 d-flex flex-column">
-                    <div class="ratio ratio-4x3 mb-3" style="border-radius: 10px; overflow: hidden">
-                        <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rounded top tombstone">
-                <rect width="100%" height="100%" fill="#f8f7f6" />
-                <g transform="translate(30,12)">
-                  <rect
-                    x="0"
-                    y="78"
-                    width="140"
-                    height="18"
-                    rx="4"
-                    fill="#cfcac8"
-                  />
-                  <path
-                    d="M0 78 C0 42, 140 42, 140 78 L140 96 L0 96 Z"
-                    fill="#e9e6e3"
-                    stroke="#d1ccc9"
-                  />
-                  <rect
-                    x="28"
-                    y="44"
-                    width="84"
-                    height="28"
-                    rx="5"
-                    fill="#fcfbfa"
-                    stroke="#d9d4d1"
-                  />
-                </g>
-              </svg>
-                    </div>
+        <img
+          [src]="product.image"
+          alt="{{ product.name }}"
+          loading="lazy"
+          class="img-fluid"
+          style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px;">
+      </div>
 
-                    <div class="mt-auto">
-                        <div class="d-flex justify-content-between align-items-start mb-2">
-                            <div>
-                                <div class="product-title">Rounded Heritage</div>
-                                <div class="muted-small">
-                                    Hand-chiseled edge & inscription
-                                </div>
-                            </div>
-                            <div class="text-end">
-                                <div class="price">$1,780</div>
-                                <div class="muted-small">From</div>
-                            </div>
-                        </div>
+      <!-- PRODUCT CONTENT -->
+      <div class="mt-auto">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <div>
+            <div class="product-title">{{ product.name }}</div>
+            <div class="muted-small">{{ product.desc }}</div>
+          </div>
+          <div class="text-end">
+            <div class="price">R{{ product.price }}</div>
 
-                        <div class="d-flex gap-2">
-                            <button class="btn btn-sm btn-outline-secondary w-100" data-bs-toggle="modal" data-bs-target="#quickView2">
-                  Quick view
-                </button>
-                            <button class="btn btn-sm btn-dark w-100">Add to cart</button>
-                        </div>
-                    </div>
-                </article>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="col">
-                <article class="product-card h-100 d-flex flex-column">
-                    <div class="ratio ratio-4x3 mb-3" style="border-radius: 10px; overflow: hidden">
-                        <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wide bench tombstone">
-                <rect width="100%" height="100%" fill="#f8f7f6" />
-                <g transform="translate(18,10)">
-                  <rect
-                    x="0"
-                    y="78"
-                    width="164"
-                    height="18"
-                    rx="4"
-                    fill="#cfcac8"
-                  />
-                  <path
-                    d="M0 78 C0 50, 164 50, 164 78 L164 96 L0 96 Z"
-                    fill="#ece9e6"
-                    stroke="#d6d1ce"
-                  />
-                  <rect
-                    x="38"
-                    y="46"
-                    width="86"
-                    height="26"
-                    rx="6"
-                    fill="#fbfbfa"
-                    stroke="#d9d4d1"
-                  />
-                </g>
-              </svg>
-                    </div>
-
-                    <div class="mt-auto">
-                        <div class="d-flex justify-content-between align-items-start mb-2">
-                            <div>
-                                <div class="product-title">Family Bench</div>
-                                <div class="muted-small">
-                                    Larger format for family inscriptions
-                                </div>
-                            </div>
-                            <div class="text-end">
-                                <div class="price">$2,900</div>
-                                <div class="muted-small">From</div>
-                            </div>
-                        </div>
-
-                        <div class="d-flex gap-2">
-                            <button class="btn btn-sm btn-outline-secondary w-100" data-bs-toggle="modal" data-bs-target="#quickView3">
-                  Quick view
-                </button>
-                            <button class="btn btn-sm btn-dark w-100">Add to cart</button>
-                        </div>
-                    </div>
-                </article>
-            </div>
-
-            <!-- Add more product cards as needed -->
+          </div>
         </div>
+
+        <div class="d-flex gap-2">
+          <button class="btn btn-sm btn-outline-secondary w-100"
+                  (click)="openModal(product)"
+                  data-bs-toggle="modal" data-bs-target="#productModal">
+            Quick View
+          </button>
+          <button class="btn btn-sm btn-dark w-100" routerLink="/contact">Request a quote</button>
+        </div>
+      </div>
+
+    </article>
+  </div>
+</div>
+
+
+    </div>
+    <!-- PRODUCT QUICK VIEW MODAL -->
+    <div class="modal fade" id="productModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-body p-4">
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <img [src]="selectedProduct?.image" class="img-fluid rounded" style="height:280px; object-fit:cover">
+                        </div>
+
+                        <div class="col-md-6">
+                            <h4>{{ selectedProduct?.name }}</h4>
+                            <p class="muted-small">{{ selectedProduct?.desc }}</p>
+
+                            <h5 class="price mb-3">${{ selectedProduct?.price }}</h5>
+
+                            <p class="muted-small">
+                                Personalisation available — custom engraving, fonts and motifs.
+                            </p>
+
+                            <button class="btn btn-dark mt-2" routerLink="/contact">Request Quote</button>
+                            <button class="btn btn-outline-secondary mt-2" data-bs-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
     </section>
 
 </body>

@@ -1,11 +1,20 @@
 import { Component } from '@angular/core';
 import { ProductsService } from '../services/product.service';
+import { animate, style, transition, trigger } from '@angular/animations';
 
 
 @Component({
   selector: 'app-tombstones',
   templateUrl: './tombstones.component.html',
-  styleUrls: ['./tombstones.component.css']
+  styleUrls: ['./tombstones.component.css'],
+  animations: [
+    trigger('fadeSlideIn', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateY(20px)' }),
+        animate('400ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
+      ])
+    ])
+  ]
 })
 export class TombstonesComponent {
   allProducts = this.productService.getProducts();

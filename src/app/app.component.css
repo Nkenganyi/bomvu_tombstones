@@ -33,6 +33,40 @@
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
 }
 
+/* Logo size */
+.brand-logo {
+  height: auto;             /* adjust to preferred size */
+  width: 250px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Hover animation on logo */
+.navbar-brand:hover .brand-logo {
+  transform: scale(1.05);
+}
+
+/* Brand text hover behavior (matching previous animations) */
+.brand-title span {
+  transition: color 0.3s ease, letter-spacing 0.25s ease;
+}
+
+.brand-title:hover span {
+  color: #a3363f;
+  letter-spacing: 0.5px;
+}
+
+/* Logo shrink on scroll */
+.navbar-custom.navbar-scrolled .brand-logo {
+  height: 28px;
+}
+
+/* Optional: keep brand tight */
+.navbar-brand {
+  display: flex !important;
+  align-items: center;
+}
+
 
 /* Add body spacing
 
@@ -75,17 +109,14 @@ html {
     z-index: 2;
 }
 
-.footer-logo-placeholder {
-    width: 160px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    letter-spacing: 1px;
+
+
+.footer-brand-logo {
+  height: auto;             /* adjust to preferred size */
+  width: 160px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: brightness(0) invert(100%);
 }
 
 .footer-links a {

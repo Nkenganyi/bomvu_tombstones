@@ -1,3 +1,35 @@
+
+/* Product card hover animation */
+.product-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 12px;
+}
+
+/* Lift + shadow when hovering */
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Image zoom animation */
+.product-card img {
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Optional: smooth fade in for buttons on hover */
+.product-card .btn {
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover .btn {
+  opacity: 1;
+}
+
+
 .pagination .page-item.active .page-link {
     background: var(--pricolor);
     border: none;
