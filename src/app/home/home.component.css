@@ -32,6 +32,10 @@
      padding-right: 1.5rem;
  }
 
+ .media-wrapper img{
+     height: 300px;
+     width: auto;
+ }
  .hero-logo{
   height: 500px;
   width: auto;
