@@ -12,13 +12,13 @@
  }
 
  .hero-media .media-wrapper {
-    width: 70%;
-    max-width: 350px;    /* Prevents right side from expanding the layout */
+    width: 70px;
+    max-width: 200px;    /* Prevents right side from expanding the layout */
     margin: 0 auto;
 }
 
 .hero-logo {
-    width: 300px;
+    width: 100px;
     height: auto;
 }
 
