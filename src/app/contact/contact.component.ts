@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-contact',
@@ -7,21 +10,44 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
+  formspreeUrl = 'https://formspree.io/f/mojkppdg';
 
-  submitted = false;
+  loading = false;
+  success = false;
+  error = false;
 
-  form = {
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
-  };
+  contactForm = this.fb.group({
+    name: ['', Validators.required],
+    email: ['', [Validators.required, Validators.email]],
+    phone: [''],
+    subject: ['', Validators.required],
+    message: ['', Validators.required],
+
+  });
+
+  constructor(private fb: FormBuilder, private http: HttpClient) {}
 
   submitForm() {
-    console.log("FORM DATA:", this.form);
-    this.submitted = true;
+    if (this.contactForm.invalid) return;
 
-    // ❗️ To send via API later:
-    // this.http.post("YOUR_BACKEND_URL", this.form).subscribe(...)
+    this.loading = true;
+
+    this.http.post(this.formspreeUrl, this.contactForm.value, {
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).subscribe({
+      next: () => {
+        this.success = true;
+        this.error = false;
+        this.loading = false;
+        this.contactForm.reset();
+      },
+      error: () => {
+        this.error = true;
+        this.success = false;
+        this.loading = false;
+      }
+    });
   }
 }
